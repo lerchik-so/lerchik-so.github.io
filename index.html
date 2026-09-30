@@ -1,0 +1,396 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lerchik | Personal Website</title>
+    <meta name="description" content="Lerchik's personal website, projects, skills, and contact information.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.8;
+        }
+
+        .container {
+            width: min(1100px, 90%);
+            margin: auto;
+        }
+
+        header {
+            border-bottom: 1px solid #1e293b;
+            position: sticky;
+            top: 0;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+
+        nav {
+            min-height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #60a5fa;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        .hero {
+            min-height: 82vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 25px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            font-weight: bold;
+            box-shadow: 0 0 40px rgba(59, 130, 246, 0.3);
+        }
+
+        .hello {
+            color: #60a5fa;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: clamp(2.3rem, 7vw, 4.5rem);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+            margin: 0 auto 30px;
+            max-width: 650px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #3b82f6;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            border: 1px solid #334155;
+            color: #e2e8f0;
+        }
+
+        .btn-secondary:hover {
+            border-color: #60a5fa;
+            color: #60a5fa;
+        }
+
+        section {
+            padding: 90px 0;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .section-description {
+            color: #94a3b8;
+            margin-bottom: 35px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #111c30;
+            padding: 25px;
+            border: 1px solid #1e293b;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #3b82f6;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #f8fafc;
+        }
+
+        .card p {
+            color: #94a3b8;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #1e293b;
+            color: #64748b;
+        }
+
+        @media (max-width: 650px) {
+            nav {
+                flex-direction: column;
+                justify-content: center;
+                padding: 15px 0;
+                gap: 8px;
+            }
+
+            nav ul {
+                gap: 13px;
+                font-size: 0.9rem;
+            }
+
+            .hero {
+                min-height: 75vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav class="container">
+        <div class="logo">Lerchik.</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section class="hero" id="home">
+        <div class="hero-content container">
+
+            <div class="avatar">L</div>
+
+            <div class="hello">Hello 👋 I'm Lerchik</div>
+
+            <h1>
+                I Learn, Build
+                <br>
+                and Turn Ideas Into Projects.
+            </h1>
+
+            <p>
+                Welcome to my personal space on the internet.
+                Here I share my projects, what I'm learning,
+                and my journey in web development and technology.
+            </p>
+
+            <div class="buttons">
+                <a href="#projects" class="btn btn-primary">
+                    View My Projects
+                </a>
+
+                <a href="#contact" class="btn btn-secondary">
+                    Contact Me
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="about">
+        <div class="container">
+
+            <h2>👨‍💻 About Me</h2>
+
+            <p class="section-description">
+                Hi, I'm Lerchik. I'm interested in programming,
+                technology, and building useful digital projects.
+                I'm constantly learning more about web development,
+                software, servers, and modern technologies.
+                This website is where I collect and showcase my work.
+            </p>
+
+        </div>
+    </section>
+
+
+    <section id="skills">
+        <div class="container">
+
+            <h2>🛠️ My Skills</h2>
+
+            <p class="section-description">
+                Technologies I'm currently learning and using in my projects.
+            </p>
+
+            <div class="grid">
+
+                <div class="card">
+                    <h3>HTML</h3>
+                    <p>Building clean and structured web pages.</p>
+                </div>
+
+                <div class="card">
+                    <h3>CSS</h3>
+                    <p>Designing modern and responsive user interfaces.</p>
+                </div>
+
+                <div class="card">
+                    <h3>JavaScript</h3>
+                    <p>Adding interactivity and logic to websites.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Git & GitHub</h3>
+                    <p>Managing code, projects, and website deployments.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="projects">
+        <div class="container">
+
+            <h2>🚀 My Projects</h2>
+
+            <p class="section-description">
+                Projects I build while learning and improving my skills.
+            </p>
+
+            <div class="grid">
+
+                <div class="card">
+                    <h3>🌐 Personal Website</h3>
+                    <p>
+                        My first website and personal space,
+                        hosted at lerchik.bbroot.com.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>💻 Next Project</h3>
+                    <p>
+                        My next project will appear here soon.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🚧 Work in Progress</h3>
+                    <p>
+                        More projects will be added as I continue learning.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="contact" class="contact">
+        <div class="container">
+
+            <h2>📬 Contact Me</h2>
+
+            <p class="section-description">
+                Have an idea, a question, or just want to say hello?
+            </p>
+
+            <a
+                href="mailto:you@example.com"
+                class="btn btn-primary"
+            >
+                Send Me an Email
+            </a>
+
+        </div>
+    </section>
+
+</main>
+
+
+<footer>
+    © 2026 Lerchik — All Rights Reserved.
+</footer>
+
+</body>
+</html>
+```
